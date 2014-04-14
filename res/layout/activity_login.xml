@@ -1,0 +1,110 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/titleBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#051405">
+
+        <TextView 
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:layout_centerInParent="true"
+            android:text="@string/knowledge_text"
+            android:textSize="22sp"
+            />
+
+        <Spinner
+            android:id="@+id/navigate_spinner"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/titleText"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:background="#EEE8AB" />
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+       <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:text="@string/textview_UserName" />
+     
+     <TextView
+        android:id="@+id/tvPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvUserName"
+        android:layout_marginTop="28dp"
+        android:layout_alignRight="@+id/tvUserName"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:text="@string/textview_Password" /> 
+     
+     
+
+    <EditText
+        android:id="@+id/etuserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tvUserName"
+        android:layout_alignBaseline="@+id/tvUserName"
+        android:ems="20"
+        android:textSize="20sp"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/etpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvPassword"
+        android:layout_alignLeft="@+id/etuserName"
+        android:ems="20"
+        android:textSize="20sp"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/tvPassword"
+        android:layout_centerVertical="true"
+        android:text="@string/login_ButtonText" 
+        android:textSize="15sp"
+        android:background="#EEE8AB"
+        />
+
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/loginButton"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/loginButton"
+        android:text="@string/register_ButtonText" 
+        android:background="#EEE8AB"
+        android:textSize="15sp"/> 
+        
+    </RelativeLayout>
+
+</LinearLayout>

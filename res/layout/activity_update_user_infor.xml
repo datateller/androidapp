@@ -1,0 +1,251 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5FFFB"
+    tools:context=".UpdateUserInforActivity" >
+
+    <TextView
+        android:id="@+id/childbirthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/childname"
+        android:layout_below="@+id/childname"
+        android:layout_marginTop="24dp"
+        android:text="@string/childbirthday"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/childsex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/childbirthday"
+        android:layout_below="@+id/childbirthday"
+        android:layout_marginTop="24dp"
+        android:text="@string/childsex"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/childweight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/childsex"
+        android:layout_below="@+id/childsex"
+        android:layout_marginTop="24dp"
+        android:text="@string/childweight"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/childheight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/childweight"
+        android:layout_below="@+id/childweight"
+        android:layout_marginTop="24dp"
+        android:text="@string/childheight"
+        android:textSize="20sp" />
+    
+     <TextView
+        android:id="@+id/familyaddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/childheight"
+        android:layout_below="@+id/childheight"
+        android:layout_marginTop="24dp"
+        android:text="@string/family_address"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/schooladdress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/familyaddress"
+        android:layout_below="@+id/familyaddress"
+        android:layout_marginTop="24dp"
+        android:text="@string/school_address"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/etchildrname"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/childname"
+        android:layout_alignBottom="@+id/childname"
+        android:layout_toRightOf="@+id/childname"
+        android:ems="10"
+        android:inputType="text" >
+    </EditText>
+
+    <RadioGroup
+        android:id="@+id/childsexRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/childsex"
+        android:layout_toRightOf="@+id/childsex"
+        android:orientation="horizontal"
+        >
+
+        <RadioButton
+            android:id="@+id/boyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/boy" 
+            android:textSize="20sp"/>
+
+        <RadioButton
+            android:id="@+id/girlButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/girl" 
+            android:textSize="20sp"/>
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/etchildheight"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/childweight"
+        android:layout_alignBottom="@+id/childweight"
+        android:layout_alignLeft="@+id/childsexRadioGroup"
+        android:inputType="number"
+        android:ems="10" />
+
+    <EditText
+        android:id="@+id/etchildweight"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/childheight"
+        android:layout_alignLeft="@+id/etchildheight"
+        android:inputType="number"
+        android:ems="10"  ></EditText>
+        
+
+    <TextView
+        android:id="@+id/childweightutil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/childheight"
+        android:layout_alignBottom="@+id/childheight"
+        android:layout_alignLeft="@+id/childheightunit"
+        android:text="@string/weightunit"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/childname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/childname"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/childheightunit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/childheight"
+        android:layout_toRightOf="@+id/etchildheight"
+        android:text="@string/heightunit"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/etbirthday"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/childbirthday"
+        android:layout_alignBottom="@+id/childbirthday"
+        android:layout_toRightOf="@+id/birthmonth"
+        android:ems="2"
+        android:inputType="number" />
+    
+    
+    <EditText
+        android:id="@+id/etbirthmonth"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/childbirthday"
+        android:layout_alignBottom="@+id/childbirthday"
+        android:layout_toRightOf="@+id/birthyear"
+        android:ems="2"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/etbirthyear"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/childbirthday"
+        android:layout_alignBottom="@+id/childbirthday"
+        android:layout_alignLeft="@+id/etchildrname"
+        android:ems="4"
+        android:inputType="number" />
+    
+    <EditText
+        android:id="@+id/etfamilyaddress"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/familyaddress"
+        android:layout_alignBottom="@+id/familyaddress"
+        android:layout_toRightOf="@+id/familyaddress"
+        android:ems="20"
+        android:inputType="text" >
+    </EditText>
+    
+    <EditText
+        android:id="@+id/etschooladdress"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/schooladdress"
+        android:layout_alignBottom="@+id/schooladdress"
+        android:layout_toRightOf="@+id/schooladdress"
+        android:ems="20"
+        android:inputType="text" >
+    </EditText>
+
+    <TextView
+        android:id="@+id/birthyear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/childbirthday"
+        android:layout_alignBottom="@+id/childbirthday"
+        android:layout_toRightOf="@+id/etbirthyear"
+        android:text="@string/birthyear" 
+        android:textSize="20sp"
+        />
+    
+    <TextView
+        android:id="@+id/birthmonth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/childbirthday"
+        android:layout_alignBottom="@+id/childbirthday"
+        android:layout_toRightOf="@+id/etbirthmonth"
+        android:text="@string/birthmonth" 
+        android:textSize="20sp"
+        />
+    
+    <TextView
+        android:id="@+id/birthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/childbirthday"
+        android:layout_alignBottom="@+id/childbirthday"
+        android:layout_toRightOf="@+id/etbirthday"
+        android:text="@string/birthday" 
+        android:textSize="20sp"
+        />
+
+    <Button
+        android:id="@+id/updateBabyInforButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="31dp"
+        android:background="#EEE8AB"
+        android:text="更新宝贝信息" />
+
+</RelativeLayout>

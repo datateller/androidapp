@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".RegisterActivity" >
+
+      <RelativeLayout
+        android:id="@+id/titleBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#051405">
+
+        <TextView 
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:layout_centerInParent="true"
+            android:text="@string/register_activity_title"
+            android:textSize="22sp"
+            />
+
+        <Spinner
+            android:id="@+id/register_activity_navigate_spinner"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/titleText"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:background="#EEE8AB" />
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/register_activity_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        > 
+        <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="20sp"
+        android:text="@string/register_textviewUserName" />
+     
+     <TextView
+        android:id="@+id/tvPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvUserName"
+        android:layout_marginTop="28dp"
+        android:layout_alignRight="@+id/tvUserName"
+        android:textSize="20sp"
+        android:text="@string/register_textviewPassword" /> 
+     
+      <TextView
+          android:id="@+id/tvConfirmPassword"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/tvPassword"
+          android:layout_marginTop="28dp"
+          android:text="@string/register_textviewConfirmPassword"
+          android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/etuserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tvUserName"
+        android:layout_alignBaseline="@+id/tvUserName"
+        android:ems="20"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/etpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvPassword"
+        android:layout_alignLeft="@+id/etuserName"
+        android:ems="20"
+        android:inputType="textPassword" />
+    
+    <EditText
+        android:id="@+id/etconfirmpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvConfirmPassword"
+        android:layout_alignLeft="@+id/etpassword"
+        android:ems="20"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="17dp"
+        android:layout_marginRight="21dp"
+        android:background="#EEE8AB"
+        android:text="@string/register_nextstep"
+        android:textSize="15sp" />
+        
+    </RelativeLayout>  
+      
+
+</RelativeLayout>

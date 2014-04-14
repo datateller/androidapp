@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:id="@+id/titleBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#051405">
+
+        <TextView 
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:layout_centerInParent="true"
+            android:text="设置"
+            android:textSize="22sp"
+            />
+
+        <Spinner
+            android:id="@+id/navigate_spinner"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/titleText"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:background="#EEE8AB" />
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/hello_world"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/updateUserInfoActivityButton"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_above="@+id/logoutButton"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="39dp"
+            android:background="#EEE8AB"
+            android:text="更新个人信息" />
+
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textView2"
+            android:background="#EEE8AB"
+            android:text="退出" />
+
+    </RelativeLayout>
+
+</LinearLayout>
